@@ -164,10 +164,10 @@ void wxRarFrame::OnOk(wxCommandEvent & evt) {
         }
         if (!m_textCtrl2->GetValue().IsEmpty())
             password=" -p"+m_textCtrl2->GetValue();
-        else {
+        else 
             password=wxEmptyString;
-            file=m_staticText2->GetLabel()+wxFileName::GetPathSeparator()+f+wxFileName::GetPathSeparator()+f1;
-        }
+            
+        file=m_staticText2->GetLabel()+wxFileName::GetPathSeparator()+f+wxFileName::GetPathSeparator()+f1;
         as.Add(console+" \" \\\""+path+wxFileName::GetPathSeparator()+"unrar\\\" x \\\""+file+("\\\"")+password+"\"");
         delete dir1;
     } while (dir.GetNext(&f));
